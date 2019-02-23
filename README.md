@@ -1,5 +1,7 @@
 # personal-web-v2
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/deneuv34/github-page-v2.svg)](https://greenkeeper.io/)
+
 > Personal Web using Vuejs
 
 ## Build Setup
