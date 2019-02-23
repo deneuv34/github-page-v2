@@ -1,6 +1,10 @@
 # personal-web-v2
 
+<<<<<<< Updated upstream
 [![Greenkeeper badge](https://badges.greenkeeper.io/deneuv34/github-page-v2.svg)](https://greenkeeper.io/)
+=======
+[![Build Status](https://travis-ci.com/deneuv34/github-page-v2.svg?branch=master)](https://travis-ci.com/deneuv34/github-page-v2)
+>>>>>>> Stashed changes
 
 > Personal Web using Vuejs
 
