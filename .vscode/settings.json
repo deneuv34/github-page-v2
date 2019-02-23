@@ -1,4 +1,5 @@
 {
     "editor.tabSize": 2,
-    "prettier.useTabs": true
+    "prettier.useTabs": true,
+    "editor.insertSpaces": false
 }
