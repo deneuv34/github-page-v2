@@ -6,7 +6,7 @@
       </h1>
     </v-layout>
     <v-layout row justify-center>
-      <nuxt-link style="text-decoration: none;" to="/about">
+      <nuxt-link style="text-decoration: none;" to="#">
         <div class="more-button">
           More About Me
         </div>
