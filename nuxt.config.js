@@ -5,10 +5,10 @@ module.exports = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: pkg.name,
+    title: 'Rangga Adhitya Prawira',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -25,38 +25,42 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
-  css: ['~/assets/style/app.styl'],
+   ** Global CSS
+   */
+  css: [
+    '~/assets/style/app.styl',
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: ['@/plugins/vuetify'],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ['@/plugins/vuetify', '~/plugins/fontawesome.js'],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/font-awesome'
   ],
   /*
-  ** Axios module configuration
-  */
+   ** Axios module configuration
+   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
@@ -67,8 +71,8 @@ module.exports = {
     },
 
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

@@ -1,32 +1,31 @@
 <template>
-  <div class="blog-card">
-    <v-img
-      :src="`https://picsum.photos/500/300?image=${Math.floor(Math.random() * 10) * 5 + 10}`"
-      :lazy-src="`https://picsum.photos/500/300?image=${Math.floor(Math.random() * 10) * 5 + 10}`"
-      class="grey lighten-2"
-      height="200px"
-      style="border-radius: 8px 8px 0px 0px;"
-    />
-    <div class="post-content">
-      <span class="post-title">{{ posts[0].title }}</span>
-      <p class="post-body">
-        {{ posts[0].body }}
-      </p>
-    </div>
-  </div>
+  <v-hover>
+    <v-card
+      slot-scope="{ hover }"
+      :class="`elevation-${hover ? 6 : 1}`"
+      flat
+      style="border-radius: 8px; text-align: left;"
+    >
+      <v-img
+        :src="`https://picsum.photos/500/300?image=${number * 5 + 10}`"
+        :lazy-src="`https://picsum.photos/500/300?image=${number * 5 + 10}`"
+        class="grey lighten-2"
+        height="200px"
+        style="border-radius: 8px 8px 0px 0px;"
+      />
+      <div class="post-content">
+        <span class="post-title">{{ posts[0].title }}</span>
+        <p class="post-body">
+          {{ posts[0].body }}
+        </p>
+      </div>
+    </v-card>
+  </v-hover>
 </template>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Lato:700&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Cousine:400,700&subset=latin-ext');
-
-.blog-card {
-  border-radius: 8px;
-  width: 100%;
-  text-align: left;
-  -moz-window-shadow: 3px;
-  word-wrap: break-word;
-}
 
 .post-body {
   font-family: 'Roboto Slab', serif;
@@ -40,13 +39,13 @@
 .post-title {
   font-family: 'Lato', sans-serif;
   font-size: 30px;
-  opacity: 0.8;
 }
 </style>
 
 <script>
 export default {
   name: 'ArticleCard',
+  props: ['number'],
   data() {
     return {
       posts: [

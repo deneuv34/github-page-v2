@@ -6,15 +6,22 @@
       </h1>
     </v-layout>
     <v-layout row justify-center>
-      <div class="more-button">
-        More About Me
-      </div>
+      <nuxt-link style="text-decoration: none;" to="/about">
+        <div class="more-button">
+          More About Me
+        </div>
+      </nuxt-link>
     </v-layout>
     <section />
     <v-container grid-list-lg fluid>
+      <div style="text-align: left;">
+        <h1 class="stories">
+          :/Stories
+        </h1>
+      </div>
       <v-layout row wrap>
         <v-flex v-for="n in 6" :key="n" sm4 xs4>
-          <ArticleCard />
+          <ArticleCard :number="n" />
         </v-flex>
       </v-layout>
     </v-container>
@@ -31,12 +38,17 @@ export default {
 }
 </script>
 
-
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Lato:700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Lato:700&subset=latin-ext');
 
 section {
   height: 100px;
+}
+.stories {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  opacity: 0.8;
 }
 .tagline {
   font-family: 'Lato', sans-serif;
