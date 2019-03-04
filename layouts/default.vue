@@ -32,7 +32,7 @@
     </v-container>
     <v-footer height="100px">
       <v-layout row wrap justify-center>
-        <a href="http://instagram.com/denev34">
+        <a href="http://instagram.com/denev3">
           <font-awesome-icon
             :icon="['fab', 'instagram']"
             size="lg"

@@ -25,6 +25,11 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-container>
+      <div class="skills">
+
+      </div>
+    </v-container>
   </div>
 </template>
 

@@ -1,9 +1,16 @@
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const pkg = require('./package')
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/deneuv34.github.io'
+        }
+      }
+    : {}
 
 module.exports = {
   mode: 'universal',
-
   /*
    ** Headers of the page
    */
@@ -21,7 +28,8 @@ module.exports = {
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
-    ]
+    ],
+    ...routerBase
   },
 
   /*
