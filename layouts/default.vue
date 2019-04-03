@@ -48,7 +48,7 @@
           />
         </a>
         <div class="separator"></div>
-        <a href="http://github.com/deneuv34">
+        <a href="http://github.com/deneuv3">
           <font-awesome-icon
             :icon="['fab', 'github']"
             size="lg"
