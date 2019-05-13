@@ -26,7 +26,7 @@
     "i": "0.3.6",
     "npm": "6.9.0",
     "nuxt": "2.6.3",
-    "vuetify": "1.5.9",
+    "vuetify": "1.5.14",
     "vuetify-loader": "1.2.1"
   },
   "devDependencies": {
